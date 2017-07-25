@@ -3,15 +3,15 @@ package com.firok.springer.dao.impl;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.firok.springer.dao.ICustomerDao;
-import com.firok.springer.entities.Customer;
+import com.firok.springer.dao.CustomerDao;
+import com.firok.springer.entity.Customer;
 
 @Transactional
 @Repository
-public class CustomerDao extends BaseDao<Customer , Long> implements ICustomerDao {
+public class CustomerDaoImpl extends BaseDaoImpl<Customer , Long> implements CustomerDao {
 	
 	
-	public CustomerDao() {
+	public CustomerDaoImpl() {
 		super(Customer.class);
 	}
 

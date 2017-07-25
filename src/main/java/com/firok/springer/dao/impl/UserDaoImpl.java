@@ -3,16 +3,16 @@ package com.firok.springer.dao.impl;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.firok.springer.dao.IUserDao;
-import com.firok.springer.entities.User;
+import com.firok.springer.dao.UserDao;
+import com.firok.springer.entity.User;
 
 
 
 @Transactional
 @Repository
-public class UserDao extends BaseDao<User, Long> implements IUserDao {
+public class UserDaoImpl extends BaseDaoImpl<User, Long> implements UserDao {
 
-	public UserDao() {
+	public UserDaoImpl() {
 		super(User.class);
 		// TODO Auto-generated constructor stub
 	}

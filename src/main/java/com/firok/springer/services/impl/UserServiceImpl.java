@@ -3,19 +3,19 @@ package com.firok.springer.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.firok.springer.dao.IBaseDao;
-import com.firok.springer.dao.IUserDao;
-import com.firok.springer.entities.User;
-import com.firok.springer.services.IUserService;
+import com.firok.springer.dao.BaseDao;
+import com.firok.springer.dao.UserDao;
+import com.firok.springer.entity.User;
+import com.firok.springer.services.UserService;
 
 @Service
-public class UserService extends BaseService<User, Long> implements IUserService {
+public class UserServiceImpl extends BaseServiceImpl<User, Long> implements UserService {
 	
 	@Autowired
-	private IUserDao userDao;
+	private UserDao userDao;
 
 	@Override
-	protected IBaseDao<User, Long> getDao() {
+	protected BaseDao<User, Long> getDao() {
 		return userDao;
 	}
 

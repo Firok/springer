@@ -3,12 +3,12 @@ package com.firok.springer.services.impl;
 import java.io.Serializable;
 import java.util.List;
 
-import com.firok.springer.dao.IBaseDao;
-import com.firok.springer.services.IBaseService;
+import com.firok.springer.dao.BaseDao;
+import com.firok.springer.services.BaseService;
 
-public abstract  class BaseService<T, K extends Serializable> implements IBaseService<T, K> {
+public abstract  class BaseServiceImpl<T, K extends Serializable> implements BaseService<T, K> {
 
-	protected abstract IBaseDao<T, K> getDao();
+	protected abstract BaseDao<T, K> getDao();
 
 	@Override
 	public List<T> findAll() {

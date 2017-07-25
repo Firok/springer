@@ -3,7 +3,7 @@ package com.firok.springer.services;
 import java.io.Serializable;
 import java.util.List;
 
-public interface IBaseService<T, K extends Serializable> {
+public interface BaseService<T, K extends Serializable> {
 
 	List<T> findAll();
 

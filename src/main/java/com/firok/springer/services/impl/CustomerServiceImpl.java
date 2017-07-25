@@ -3,19 +3,19 @@ package com.firok.springer.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.firok.springer.dao.IBaseDao;
-import com.firok.springer.dao.ICustomerDao;
-import com.firok.springer.entities.Customer;
-import com.firok.springer.services.ICustomerService;
+import com.firok.springer.dao.BaseDao;
+import com.firok.springer.dao.CustomerDao;
+import com.firok.springer.entity.Customer;
+import com.firok.springer.services.CustomerService;
 
 @Service
-public class CustomerService extends BaseService<Customer, Long> implements ICustomerService {
+public class CustomerServiceImpl extends BaseServiceImpl<Customer, Long> implements CustomerService {
 
 	@Autowired
-	private ICustomerDao customerDao;
+	private CustomerDao customerDao;
 
 	@Override
-	protected IBaseDao<Customer, Long> getDao() {
+	protected BaseDao<Customer, Long> getDao() {
 		return customerDao;
 	}
 

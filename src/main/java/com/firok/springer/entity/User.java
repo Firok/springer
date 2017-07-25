@@ -1,4 +1,4 @@
-package com.firok.springer.entities;
+package com.firok.springer.entity;
 
 import java.io.Serializable;
 

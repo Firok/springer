@@ -3,7 +3,7 @@ package com.firok.springer.dao;
 import java.io.Serializable;
 import java.util.List;
 
-public interface IBaseDao<T, K extends Serializable> {
+public interface BaseDao<T, K extends Serializable> {
 	
 	List<T> findAll();
 	

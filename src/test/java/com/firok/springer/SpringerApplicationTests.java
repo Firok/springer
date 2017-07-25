@@ -8,15 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.firok.springer.entities.Customer;
-import com.firok.springer.services.ICustomerService;
+import com.firok.springer.entity.Customer;
+import com.firok.springer.services.CustomerService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringerApplicationTests {
 
 	@Autowired
-	ICustomerService customerService;
+	CustomerService customerService;
 
 	@Test
 	public void contextLoads() {

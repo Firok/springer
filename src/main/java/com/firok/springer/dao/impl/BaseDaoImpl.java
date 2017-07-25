@@ -6,9 +6,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.firok.springer.dao.IBaseDao;
+import com.firok.springer.dao.BaseDao;
 
-public class BaseDao<T, K extends Serializable> implements IBaseDao<T, K> {
+public class BaseDaoImpl<T, K extends Serializable> implements BaseDao<T, K> {
 	
 	@PersistenceContext
 	protected EntityManager entityManager;
@@ -16,10 +16,10 @@ public class BaseDao<T, K extends Serializable> implements IBaseDao<T, K> {
 	private Class<T> type;
 	
 	
-	public BaseDao() {
+	public BaseDaoImpl() {
 	}
 
-	public BaseDao(Class<T> type) {
+	public BaseDaoImpl(Class<T> type) {
 		this.type = type;
 	}
 

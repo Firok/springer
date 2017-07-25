@@ -16,15 +16,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.firok.springer.entities.User;
-import com.firok.springer.services.IUserService;
+import com.firok.springer.entity.User;
+import com.firok.springer.services.UserService;
 
 @Controller
 @RequestMapping("users")
 public class UserWebservice {
 
 	@Autowired
-	private IUserService userService;
+	private UserService userService;
 
 	@GetMapping
 	public ResponseEntity<List<User>> getAllUsers() {
